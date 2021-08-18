@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  BreachesViewController.swift
 //  SimpleMVVMExample
 //
 //  Created by Shinu Mohan on 17/08/21.
@@ -75,7 +75,10 @@ extension BreachesViewController {
         self.activityIndicator.stopAnimating()
         return Guarantee()
     }
+}
 
+extension BreachesViewController {
+    
     private func fetchJSON() -> Promise<[Photo]> {
         return Promise { seal in
             

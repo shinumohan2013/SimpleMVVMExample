@@ -1,5 +1,5 @@
 //
-//  ContentModel.swift
+//  BreachModel.swift
 //  SimpleMVVMExample
 //
 //  Created by Shinu Mohan on 17/08/21.

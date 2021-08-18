@@ -12,14 +12,15 @@ target 'SimpleMVVMExample' do
   # Pods for SimpleMVVMExample
 
   target 'SimpleMVVMExampleTests' do
-    inherit! :search_paths
     # Pods for Unittesting
-    pod 'SnapshotTesting', '~> 1.8.1'
+    inherit! :search_paths
+    pod 'SnapshotTesting'
   end
 
   target 'SimpleMVVMExampleUITests' do
     # Pods for UItesting
-    pod 'SnapshotTesting', '~> 1.8.1'
+    inherit! :search_paths
+    pod 'SnapshotTesting'
   end
 
 end

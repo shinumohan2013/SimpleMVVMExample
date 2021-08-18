@@ -5,6 +5,7 @@
 //  Created by Shinu Mohan on 17/08/21.
 
 import XCTest
+
 @testable import SimpleMVVMExample
 
 class SimpleMVVMExampleTests: XCTestCase {
