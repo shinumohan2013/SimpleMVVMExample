@@ -5,6 +5,8 @@
 //  Created by Shinu Mohan on 17/08/21.
 
 import Foundation
+import Alamofire
+import PromiseKit
 
 class BreachViewModel {
     // MARK: - Initialization
@@ -18,8 +20,10 @@ class BreachViewModel {
     
 }
 
+
 extension BreachViewModel {
-    func fetchBreaches(completion: @escaping (Result<[BreachModel], Error>) -> Void) {
-        completion(.success(breaches))
+    func fetchBreaches(completion: @escaping (Result<[BreachModel]>) -> Void) {
+        completion(.fulfilled(breaches))
+        completion(.rejected("error" as! Error))
     }
 }
