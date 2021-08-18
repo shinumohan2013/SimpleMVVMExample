@@ -16,12 +16,46 @@ class SimpleMVVMExampleTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
+    
+    func testControllerHasTableView() {
+        guard let controller = UIStoryboard(name: "Main", bundle: Bundle(for: BreachesViewController.self)).instantiateInitialViewController() as? BreachesViewController else {
+            return XCTFail("Could not instantiate ViewController from main storyboard")
+        }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        controller.loadViewIfNeeded()
+
+        XCTAssertNotNil(controller.tableView,
+                        "Controller should have a tableview")
     }
+    
+    func testNumberOfRows() {
+        let tableView = UITableView()
+        let dataSource = tableView.dataSource
+        let numberOfRows = dataSource?.tableView(tableView, numberOfRowsInSection: 0)
+        XCTAssertEqual(numberOfRows, 20,
+                       "Number of rows in table should match number of kittens")
+    }
+    
+    func testCellForRow() {
+        let tableView = UITableView()
+        let dataSource = tableView.dataSource
+        let cell = dataSource?.tableView(tableView, cellForRowAt: IndexPath(row: 0, section: 0))
+        XCTAssertEqual(cell?.textLabel?.text, "0",
+                       "The first cell should display name of first index")
+    }
+    
+    func testTableViewHasCells() {
+        guard let controller = UIStoryboard(name: "Main", bundle: Bundle(for: BreachesViewController.self)).instantiateInitialViewController() as? BreachesViewController else {
+            return XCTFail("Could not instantiate ViewController from main storyboard")
+        }
 
+        controller.loadViewIfNeeded()
+        let cell = controller.tableView.dequeueReusableCell(withIdentifier: "cell")
+
+        XCTAssertNotNil(cell,
+                        "TableView should be able to dequeue cell with identifier: 'cell'")
+    }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {

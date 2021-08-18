@@ -22,6 +22,7 @@ class BreachesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = UIColor.lightGray
         let backgroundQueue = DispatchQueue.global(qos: .background)
         
         firstly {

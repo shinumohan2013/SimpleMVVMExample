@@ -15,11 +15,8 @@ class BreachViewModel {
             breaches = inputModel
         }
     }
-    
     var breaches: [BreachModel] = [BreachModel(title: "000webhost"),BreachModel(title: "126")]
-    
 }
-
 
 extension BreachViewModel {
     func fetchBreaches(completion: @escaping (Result<[BreachModel]>) -> Void) {
