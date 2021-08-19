@@ -6,7 +6,7 @@
 
 import XCTest
 
-@testable import SimpleMVVMExample
+@testable import SimpleMVVMExampleTests
 
 class SimpleMVVMExampleTests: XCTestCase {
 
@@ -19,7 +19,7 @@ class SimpleMVVMExampleTests: XCTestCase {
     }
     
     func testControllerHasTableView() {
-        guard let controller = UIStoryboard(name: "Main", bundle: Bundle(for: BreachesViewController.self)).instantiateInitialViewController() as? BreachesViewController else {
+        guard let controller = UIStoryboard(name: "Main", bundle: Bundle(for: PhotoListViewController.self)).instantiateInitialViewController() as? PhotoListViewController else {
             return XCTFail("Could not instantiate ViewController from main storyboard")
         }
 
@@ -46,7 +46,7 @@ class SimpleMVVMExampleTests: XCTestCase {
     }
     
     func testTableViewHasCells() {
-        guard let controller = UIStoryboard(name: "Main", bundle: Bundle(for: BreachesViewController.self)).instantiateInitialViewController() as? BreachesViewController else {
+        guard let controller = UIStoryboard(name: "Main", bundle: Bundle(for: PhotoListViewController.self)).instantiateInitialViewController() as? PhotoListViewController else {
             return XCTFail("Could not instantiate ViewController from main storyboard")
         }
 

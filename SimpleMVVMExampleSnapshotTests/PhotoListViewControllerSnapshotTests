@@ -1,6 +1,6 @@
 //
-//  BreachesViewControllerSnapshotTests.swift
-//  BreachesViewControllerSnapshotTests
+//  PhotoListViewControllerSnapshotTests.swift
+//  PhotoListViewControllerSnapshotTests
 //
 //  Created by Shinu Mohan on 18/08/21.
 
@@ -9,7 +9,7 @@ import SnapshotTesting
 
 //@testable import SimpleMVVMExampleSnapshotTests
 
-class BreachesViewControllerSnapshotTests: XCTestCase {
+class PhotoListViewControllerSnapshotTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -27,12 +27,12 @@ class BreachesViewControllerSnapshotTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func test_breachesViewControllerDefaultState() {
-            let viewController = UINavigationController(rootViewController: BreachesViewController())
+    func test_PhotoListViewControllerDefaultState() {
+            let viewController = UINavigationController(rootViewController: PhotoListViewController())
             let result = verifySnapshot(matching: viewController,
                                         as: .image(on: .iPhoneX),
                                         named: "Default",
-                                        testName: "LoginViewController")
+                                        testName: "PhotoListViewController")
             XCTAssertNil(result)
         }
 

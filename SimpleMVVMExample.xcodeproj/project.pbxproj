@@ -9,19 +9,18 @@
 /* Begin PBXBuildFile section */
 		199743BFA0939625190CD76E /* Pods_SimpleMVVMExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABD2B2B17A331355B28B3626 /* Pods_SimpleMVVMExample.framework */; };
 		61640D0D26CBCFBA001E13F4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 61640D0C26CBCFBA001E13F4 /* Podfile */; };
-		616DF48026CD01D8006E0211 /* SimpleMVVMExampleSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616DF47F26CD01D8006E0211 /* SimpleMVVMExampleSnapshotTests.swift */; };
-		616DF52226CD150C006E0211 /* BreachesViewControllerSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61640D5A26CCCC97001E13F4 /* BreachesViewControllerSnapshotTests.swift */; };
+		616DF52226CD150C006E0211 /* PhotoListViewControllerSnapshotTests in Sources */ = {isa = PBXBuildFile; fileRef = 61640D5A26CCCC97001E13F4 /* PhotoListViewControllerSnapshotTests */; };
 		8C520FE0E61D577FAC7B42FC /* Pods_SimpleMVVMExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5487752672B6992EEBC0C26C /* Pods_SimpleMVVMExampleTests.framework */; };
 		B1A660FDFD72F9BF1631F6A5 /* Pods_SimpleMVVMExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1468B59A1D111A23980DF41 /* Pods_SimpleMVVMExampleUITests.framework */; };
 		CAAD2ECB22F51C7E004310C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAD2ECA22F51C7E004310C1 /* AppDelegate.swift */; };
-		CAAD2ECD22F51C7E004310C1 /* BreachesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAD2ECC22F51C7E004310C1 /* BreachesViewController.swift */; };
+		CAAD2ECD22F51C7E004310C1 /* PhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAD2ECC22F51C7E004310C1 /* PhotoListViewController.swift */; };
 		CAAD2ED022F51C7E004310C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAAD2ECE22F51C7E004310C1 /* Main.storyboard */; };
 		CAAD2ED222F51C7F004310C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAAD2ED122F51C7F004310C1 /* Assets.xcassets */; };
 		CAAD2ED522F51C7F004310C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAAD2ED322F51C7F004310C1 /* LaunchScreen.storyboard */; };
 		CAAD2EE022F51C7F004310C1 /* SimpleMVVMExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAD2EDF22F51C7F004310C1 /* SimpleMVVMExampleTests.swift */; };
 		CAAD2EEB22F51C7F004310C1 /* SimpleMVVMExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAD2EEA22F51C7F004310C1 /* SimpleMVVMExampleUITests.swift */; };
-		CAAD2F0122F52BE6004310C1 /* BreachViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAD2F0022F52BE6004310C1 /* BreachViewModel.swift */; };
-		CAAD2F0622F531AE004310C1 /* BreachModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAD2F0522F531AE004310C1 /* BreachModel.swift */; };
+		CAAD2F0122F52BE6004310C1 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAD2F0022F52BE6004310C1 /* PhotoViewModel.swift */; };
+		CAAD2F0622F531AE004310C1 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAD2F0522F531AE004310C1 /* PhotoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,16 +55,15 @@
 		5487752672B6992EEBC0C26C /* Pods_SimpleMVVMExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleMVVMExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55624029A0AD4DD4A1B08BC6 /* Pods-SimpleMVVMExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMVVMExample.debug.xcconfig"; path = "Target Support Files/Pods-SimpleMVVMExample/Pods-SimpleMVVMExample.debug.xcconfig"; sourceTree = "<group>"; };
 		61640D0C26CBCFBA001E13F4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
-		61640D5A26CCCC97001E13F4 /* BreachesViewControllerSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreachesViewControllerSnapshotTests.swift; sourceTree = "<group>"; };
+		61640D5A26CCCC97001E13F4 /* PhotoListViewControllerSnapshotTests */ = {isa = PBXFileReference; lastKnownFileType = text; path = PhotoListViewControllerSnapshotTests; sourceTree = "<group>"; };
 		616DF47D26CD01D8006E0211 /* SimpleMVVMExampleSnapshotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleMVVMExampleSnapshotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		616DF47F26CD01D8006E0211 /* SimpleMVVMExampleSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleMVVMExampleSnapshotTests.swift; sourceTree = "<group>"; };
 		616DF48126CD01D8006E0211 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1468B59A1D111A23980DF41 /* Pods_SimpleMVVMExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleMVVMExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABD2B2B17A331355B28B3626 /* Pods_SimpleMVVMExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleMVVMExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C911F9812BDD3B6D02868FB6 /* Pods-SimpleMVVMExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMVVMExampleTests.release.xcconfig"; path = "Target Support Files/Pods-SimpleMVVMExampleTests/Pods-SimpleMVVMExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		CAAD2EC722F51C7E004310C1 /* SimpleMVVMExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMVVMExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAAD2ECA22F51C7E004310C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CAAD2ECC22F51C7E004310C1 /* BreachesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreachesViewController.swift; sourceTree = "<group>"; };
+		CAAD2ECC22F51C7E004310C1 /* PhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewController.swift; sourceTree = "<group>"; };
 		CAAD2ECF22F51C7E004310C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CAAD2ED122F51C7F004310C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAAD2ED422F51C7F004310C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,8 +74,8 @@
 		CAAD2EE622F51C7F004310C1 /* SimpleMVVMExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleMVVMExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAAD2EEA22F51C7F004310C1 /* SimpleMVVMExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleMVVMExampleUITests.swift; sourceTree = "<group>"; };
 		CAAD2EEC22F51C7F004310C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CAAD2F0022F52BE6004310C1 /* BreachViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreachViewModel.swift; sourceTree = "<group>"; };
-		CAAD2F0522F531AE004310C1 /* BreachModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreachModel.swift; sourceTree = "<group>"; };
+		CAAD2F0022F52BE6004310C1 /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
+		CAAD2F0522F531AE004310C1 /* PhotoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
 		EC5FACD34A68260473A38701 /* Pods-SimpleMVVMExample-SimpleMVVMExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMVVMExample-SimpleMVVMExampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-SimpleMVVMExample-SimpleMVVMExampleUITests/Pods-SimpleMVVMExample-SimpleMVVMExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FE17B577B17F2C538A1A4811 /* Pods-SimpleMVVMExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMVVMExample.release.xcconfig"; path = "Target Support Files/Pods-SimpleMVVMExample/Pods-SimpleMVVMExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,8 +118,7 @@
 		616DF47E26CD01D8006E0211 /* SimpleMVVMExampleSnapshotTests */ = {
 			isa = PBXGroup;
 			children = (
-				616DF47F26CD01D8006E0211 /* SimpleMVVMExampleSnapshotTests.swift */,
-				61640D5A26CCCC97001E13F4 /* BreachesViewControllerSnapshotTests.swift */,
+				61640D5A26CCCC97001E13F4 /* PhotoListViewControllerSnapshotTests */,
 				616DF48126CD01D8006E0211 /* Info.plist */,
 			);
 			path = SimpleMVVMExampleSnapshotTests;
@@ -198,7 +195,7 @@
 		CAAD2EFF22F52B83004310C1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CAAD2F0522F531AE004310C1 /* BreachModel.swift */,
+				CAAD2F0522F531AE004310C1 /* PhotoModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -206,7 +203,7 @@
 		CAAD2F0222F52BEC004310C1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				CAAD2F0022F52BE6004310C1 /* BreachViewModel.swift */,
+				CAAD2F0022F52BE6004310C1 /* PhotoViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -214,7 +211,7 @@
 		CAAD2F4922F555F9004310C1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CAAD2ECC22F51C7E004310C1 /* BreachesViewController.swift */,
+				CAAD2ECC22F51C7E004310C1 /* PhotoListViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -522,8 +519,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				616DF48026CD01D8006E0211 /* SimpleMVVMExampleSnapshotTests.swift in Sources */,
-				616DF52226CD150C006E0211 /* BreachesViewControllerSnapshotTests.swift in Sources */,
+				616DF52226CD150C006E0211 /* PhotoListViewControllerSnapshotTests in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,9 +527,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAAD2F0122F52BE6004310C1 /* BreachViewModel.swift in Sources */,
-				CAAD2ECD22F51C7E004310C1 /* BreachesViewController.swift in Sources */,
-				CAAD2F0622F531AE004310C1 /* BreachModel.swift in Sources */,
+				CAAD2F0122F52BE6004310C1 /* PhotoViewModel.swift in Sources */,
+				CAAD2ECD22F51C7E004310C1 /* PhotoListViewController.swift in Sources */,
+				CAAD2F0622F531AE004310C1 /* PhotoModel.swift in Sources */,
 				CAAD2ECB22F51C7E004310C1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -813,7 +809,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.studeapps.SimpleMVVMExampleTests;
-				PRODUCT_MODULE_NAME = SimpleMVVMExample;
+				PRODUCT_MODULE_NAME = SimpleMVVMExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -836,7 +832,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.studeapps.SimpleMVVMExampleTests;
-				PRODUCT_MODULE_NAME = SimpleMVVMExample;
+				PRODUCT_MODULE_NAME = SimpleMVVMExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

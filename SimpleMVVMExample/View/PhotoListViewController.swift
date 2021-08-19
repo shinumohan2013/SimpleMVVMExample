@@ -1,5 +1,5 @@
 //
-//  BreachesViewController.swift
+//  PhotoListViewController.swift
 //  SimpleMVVMExample
 //
 //  Created by Shinu Mohan on 17/08/21.
@@ -8,12 +8,12 @@ import UIKit
 import Alamofire
 import PromiseKit
 
-class BreachesViewController: UIViewController {
+class PhotoListViewController: UIViewController {
     
     var tableView = UITableView()
     var activityIndicator: UIActivityIndicatorView!
-    var data = [BreachModel]()
-    var breachesViewModel = BreachViewModel()
+    var data = [PhotoModel]()
+    var photosViewModel = PhotoViewModel()
     private let photosURL = "https://jsonplaceholder.typicode.com/photos"
     private var photos: [UIImage] = []
 
@@ -55,13 +55,12 @@ class BreachesViewController: UIViewController {
             tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             ])
-        
     }
 }
 
 // MARK :- Loading Indicator Helper Methods
 
-extension BreachesViewController {
+extension PhotoListViewController {
     
     private func showLoader() -> Guarantee<Void> {
         self.activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
@@ -80,41 +79,42 @@ extension BreachesViewController {
 
 // MARK :- Photo Api Calls
 
-extension BreachesViewController {
+extension PhotoListViewController {
     
-    private func fetchJSON() -> Promise<[Photo]> {
+    private func fetchJSON() -> Promise<[PhotoModel]> {
         return Promise { seal in
             let request = AF.request(photosURL).validate().response { (data) in
                 guard let data = data.data else {
-                    seal.reject(PhotoError.ConvertToData)
+                    seal.reject(PhotoViewModel.PhotoError.ConvertToData)
                     return
                 }
-                guard let photos = try? JSONDecoder().decode([Photo].self, from: data) else {
-                    seal.reject(PhotoError.PhotoDecoding)
+                guard let photos = try? JSONDecoder().decode([PhotoModel].self, from: data) else {
+                    seal.reject(PhotoViewModel.PhotoError.PhotoDecoding)
                     return
                 }
                 seal.fulfill(photos)
             }
+            
             request.responseJSON { (data) in
                 print(data)
             }
         }
     }
     
-    private func downloadPhotos(photos: [Photo]) -> Promise<[UIImage]> {
+    private func downloadPhotos(photos: [PhotoModel]) -> Promise<[UIImage]> {
         return Promise { seal in
             var count = 0
             for photo in photos {
                 guard let photoUrl = URL(string: photo.url) else {
-                    seal.reject(PhotoError.downloadPhotoUrl)
+                    seal.reject(PhotoViewModel.PhotoError.downloadPhotoUrl)
                     return
                 }
                 guard let photoData = try? Data(contentsOf: photoUrl) else {
-                    seal.reject(PhotoError.downloadPhotoConvertToData)
+                    seal.reject(PhotoViewModel.PhotoError.downloadPhotoConvertToData)
                     return
                 }
                 guard let photoImage = UIImage(data: photoData) else {
-                    seal.reject(PhotoError.downloadPhotoConvertToUIImage)
+                    seal.reject(PhotoViewModel.PhotoError.downloadPhotoConvertToUIImage)
                     return
                 }
                 self.photos.append(photoImage)
@@ -127,27 +127,9 @@ extension BreachesViewController {
     }
 }
 
-// MARK :- Photo Helpers
-
-enum PhotoError: Error {
-    case ConvertToData
-    case PhotoDecoding
-    case downloadPhotoUrl
-    case downloadPhotoConvertToData
-    case downloadPhotoConvertToUIImage
-}
-
-struct Photo: Codable {
-    let albumId: Int
-    let id: Int
-    let title: String
-    let url: String
-    let thumbnailUrl: String
-}
-
 // MARK :- TableViewDataSource
 
-extension BreachesViewController: UITableViewDataSource {
+extension PhotoListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.photos.count
@@ -158,7 +140,6 @@ extension BreachesViewController: UITableViewDataSource {
         cell.imgUser.image = self.photos[indexPath.row]
         cell.labUerName.text = indexPath.row.description
         cell.labMessage.text = indexPath.row.description
-        cell.labTime.text = indexPath.row.description
         return cell
     }
     
@@ -169,7 +150,7 @@ extension BreachesViewController: UITableViewDataSource {
 
 // MARK :- TableViewDelegate
 
-extension BreachesViewController: UITableViewDelegate {
+extension PhotoListViewController: UITableViewDelegate {
     
 }
 
