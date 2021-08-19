@@ -40,8 +40,8 @@ class BreachesViewController: UIViewController {
                 print(error.localizedDescription)
         }
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        
+        tableView.register(CustomPhotoCell.self, forCellReuseIdentifier: "imageCell")
+
         tableView.dataSource = self
         tableView.delegate = self
         tableView.allowsSelection = false
@@ -150,9 +150,16 @@ extension BreachesViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = indexPath.row.description
+        let cell = tableView.dequeueReusableCell(withIdentifier: "imageCell", for: indexPath) as! CustomPhotoCell
+        cell.imgUser.image = self.photos[indexPath.row]
+        cell.labUerName.text = indexPath.row.description
+        cell.labMessage.text = indexPath.row.description
+        cell.labTime.text = indexPath.row.description
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
 }
 
@@ -160,3 +167,52 @@ extension BreachesViewController: UITableViewDelegate {
     
 }
 
+//
+// MARK :- CELL
+//
+
+class CustomPhotoCell: UITableViewCell {
+    
+    let imgUser = UIImageView()
+    let labUerName = UILabel()
+    let labMessage = UILabel()
+    let labTime = UILabel()
+    
+    let containerView:UIView = {
+      let view = UIView()
+      view.translatesAutoresizingMaskIntoConstraints = false
+      view.clipsToBounds = true // this will make sure its children do not go out of the boundary
+      return view
+    }()
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        imgUser.translatesAutoresizingMaskIntoConstraints = false
+        labUerName.translatesAutoresizingMaskIntoConstraints = false
+        labMessage.translatesAutoresizingMaskIntoConstraints = false
+        labTime.translatesAutoresizingMaskIntoConstraints = false
+
+        contentView.addSubview(imgUser)
+        contentView.addSubview(labUerName)
+        contentView.addSubview(labMessage)
+        contentView.addSubview(labTime)
+
+        let viewsDict = [
+            "image" : imgUser,
+            "username" : labUerName,
+            "message" : labMessage,
+            "labTime" : labTime,
+        ] as [String : Any]
+
+        contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-[image(10)]", options: [], metrics: nil, views: viewsDict))
+        contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[labTime]-|", options: [], metrics: nil, views: viewsDict))
+        contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-[username]-[message]-|", options: [], metrics: nil, views: viewsDict))
+        contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[username]-[image(10)]-|", options: [], metrics: nil, views: viewsDict))
+        contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[message]-[labTime]-|", options: [], metrics: nil, views: viewsDict))
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
