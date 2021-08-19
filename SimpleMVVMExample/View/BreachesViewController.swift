@@ -12,12 +12,12 @@ class BreachesViewController: UIViewController {
     
     var tableView = UITableView()
     var activityIndicator: UIActivityIndicatorView!
-
     var data = [BreachModel]()
-    
     var breachesViewModel = BreachViewModel()
     private let photosURL = "https://jsonplaceholder.typicode.com/photos"
     private var photos: [UIImage] = []
+
+// MARK :- View LifeCycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +41,6 @@ class BreachesViewController: UIViewController {
         }
         
         tableView.register(CustomPhotoCell.self, forCellReuseIdentifier: "imageCell")
-
         tableView.dataSource = self
         tableView.delegate = self
         tableView.allowsSelection = false
@@ -60,6 +59,8 @@ class BreachesViewController: UIViewController {
     }
 }
 
+// MARK :- Loading Indicator Helper Methods
+
 extension BreachesViewController {
     
     private func showLoader() -> Guarantee<Void> {
@@ -77,11 +78,12 @@ extension BreachesViewController {
     }
 }
 
+// MARK :- Photo Api Calls
+
 extension BreachesViewController {
     
     private func fetchJSON() -> Promise<[Photo]> {
         return Promise { seal in
-            
             let request = AF.request(photosURL).validate().response { (data) in
                 guard let data = data.data else {
                     seal.reject(PhotoError.ConvertToData)
@@ -93,7 +95,6 @@ extension BreachesViewController {
                 }
                 seal.fulfill(photos)
             }
-            // 2
             request.responseJSON { (data) in
                 print(data)
             }
@@ -119,14 +120,14 @@ extension BreachesViewController {
                 self.photos.append(photoImage)
                 count+=1
                 print("Finished downloading photo: " + String(count))
-                
             }
             print("Finished downloading \(self.photos.count) photos")
             seal.fulfill(self.photos)
         }
     }
-    
 }
+
+// MARK :- Photo Helpers
 
 enum PhotoError: Error {
     case ConvertToData
@@ -144,7 +145,10 @@ struct Photo: Codable {
     let thumbnailUrl: String
 }
 
+// MARK :- TableViewDataSource
+
 extension BreachesViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.photos.count
     }
@@ -163,13 +167,13 @@ extension BreachesViewController: UITableViewDataSource {
     }
 }
 
+// MARK :- TableViewDelegate
+
 extension BreachesViewController: UITableViewDelegate {
     
 }
 
-//
-// MARK :- CELL
-//
+// MARK :- TableViewCell
 
 class CustomPhotoCell: UITableViewCell {
     
