@@ -6,7 +6,7 @@
 
 import XCTest
 
-@testable import SimpleMVVMExampleTests
+@testable import SimpleMVVMExample
 
 class SimpleMVVMExampleTests: XCTestCase {
 

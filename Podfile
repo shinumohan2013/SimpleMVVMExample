@@ -24,3 +24,11 @@ target 'SimpleMVVMExample' do
   end
 
 end
+
+#post_install do |pi|
+#   pi.pods_project.targets.each do |t|
+#       t.build_configurations.each do |bc|
+#          bc.build_settings['ARCHS[sdk=iphonesimulator*]'] =  `uname -m`
+#       end
+#   end
+#end
