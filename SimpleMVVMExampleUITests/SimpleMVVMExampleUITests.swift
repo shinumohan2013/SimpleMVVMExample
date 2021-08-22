@@ -6,6 +6,8 @@
 
 import XCTest
 
+@testable import SimpleMVVMExample
+
 class SimpleMVVMExampleUITests: XCTestCase {
 
     override func setUp() {

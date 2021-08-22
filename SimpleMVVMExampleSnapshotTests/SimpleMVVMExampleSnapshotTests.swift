@@ -7,9 +7,9 @@
 //
 
 import XCTest
-//import SnapshotTesting
+import SnapshotTesting
 
-@testable import SimpleMVVMExampleSnapshotTests
+@testable import SimpleMVVMExample
 
 class SimpleMVVMExampleSnapshotTests: XCTestCase {
 
@@ -33,13 +33,13 @@ class SimpleMVVMExampleSnapshotTests: XCTestCase {
         }
     }
     
-//    func test_PhotoListViewControllerDefaultState() {
-//        let viewController = UINavigationController(rootViewController: PhotoListViewController())
-//        let result = verifySnapshot(matching: viewController,
-//                                        as: .image(on: .iPhoneX),
-//                                        named: "Default",
-//                                        testName: "PhotoListViewController")
-//        XCTAssertNil(result)
-//    }
+    func test_PhotoListViewControllerDefaultState() {
+        let viewController = UINavigationController(rootViewController: PhotoListViewController())
+        let result = verifySnapshot(matching: viewController,
+                                        as: .image(on: .iPhoneX),
+                                        named: "Default",
+                                        testName: "PhotoListViewController")
+        XCTAssertNil(result)
+    }
 
 }
