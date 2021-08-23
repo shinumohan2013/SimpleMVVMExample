@@ -41,5 +41,25 @@ class SimpleMVVMExampleSnapshotTests: XCTestCase {
                                         testName: "PhotoListViewController")
         XCTAssertNil(result)
     }
+    
+    func test_verify_PhotoListViewControllerDefaultState() {
+            let viewController = UINavigationController(rootViewController: PhotoListViewController())
+            verifyViewController(viewController, named: "DefaultOne")
+    }
+    
+    private func verifyViewController(_ viewController: UIViewController, named: String) {
+            let devices: [String: ViewImageConfig] = ["iPhoneX": .iPhoneX,
+                                                      "iPhone8": .iPhone8,
+                                                      "iPhoneSe": .iPhoneSe]
+            
+            let results = devices.map { device in
+                verifySnapshot(matching: viewController,
+                               as: .image(on: device.value),
+                               named: "\(named)-\(device.key)",
+                               testName: "PhotoListViewController")
+            }
+            
+            results.forEach { XCTAssertNil($0) }
+        }
 
 }
