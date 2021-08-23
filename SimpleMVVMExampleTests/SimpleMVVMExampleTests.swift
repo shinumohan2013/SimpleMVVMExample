@@ -51,10 +51,10 @@ class SimpleMVVMExampleTests: XCTestCase {
         }
 
         controller.loadViewIfNeeded()
-        let cell = controller.tableView.dequeueReusableCell(withIdentifier: "cell")
+        let cell = controller.tableView.dequeueReusableCell(withIdentifier: "imageCell")
 
         XCTAssertNotNil(cell,
-                        "TableView should be able to dequeue cell with identifier: 'cell'")
+                        "TableView should be able to dequeue cell with identifier: 'imageCell'")
     }
     
     func testPerformanceExample() {

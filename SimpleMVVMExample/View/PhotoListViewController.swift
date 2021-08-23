@@ -14,8 +14,6 @@ class PhotoListViewController: UIViewController {
     var activityIndicator: UIActivityIndicatorView!
     var data = [PhotoModel]()
     var photosViewModel = PhotoViewModel()
-    private let photosURL = "https://jsonplaceholder.typicode.com/photos"
-    private var photos: [UIImage] = []
 
 // MARK :- View LifeCycle
 
@@ -83,7 +81,7 @@ extension PhotoListViewController {
     
     private func fetchJSON() -> Promise<[PhotoModel]> {
         return Promise { seal in
-            let request = AF.request(photosURL).validate().response { (data) in
+            let request = AF.request(photosViewModel.photosURL).validate().response { (data) in
                 guard let data = data.data else {
                     seal.reject(PhotoViewModel.PhotoError.ConvertToData)
                     return
@@ -117,12 +115,12 @@ extension PhotoListViewController {
                     seal.reject(PhotoViewModel.PhotoError.downloadPhotoConvertToUIImage)
                     return
                 }
-                self.photos.append(photoImage)
+                self.photosViewModel.photos.append(photoImage)
                 count+=1
                 print("Finished downloading photo: " + String(count))
             }
-            print("Finished downloading \(self.photos.count) photos")
-            seal.fulfill(self.photos)
+            print("Finished downloading \(self.photosViewModel.photos.count) photos")
+            seal.fulfill(self.photosViewModel.photos)
         }
     }
 }
@@ -132,12 +130,12 @@ extension PhotoListViewController {
 extension PhotoListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.photos.count
+        return self.photosViewModel.photos.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "imageCell", for: indexPath) as! CustomPhotoCell
-        cell.imgUser.image = self.photos[indexPath.row]
+        cell.imgUser.image = self.photosViewModel.photos[indexPath.row]
         cell.labUerName.text = indexPath.row.description
         cell.labMessage.text = indexPath.row.description
         return cell

@@ -10,6 +10,9 @@ import PromiseKit
 
 class PhotoViewModel {
     
+    let photosURL = "https://jsonplaceholder.typicode.com/photos"
+    var photos: [UIImage] = []
+    
     // MARK: - Initialization
     init(model: [PhotoModel]? = nil) {
         if let inputModel = model {
