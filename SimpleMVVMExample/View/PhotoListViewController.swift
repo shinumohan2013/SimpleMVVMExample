@@ -19,7 +19,7 @@ class PhotoListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("Url:\(baseUrl)")
         self.title = "Customer Overview"
         self.view.backgroundColor = UIColor.lightGray
         let backgroundQueue = DispatchQueue.global(qos: .background)

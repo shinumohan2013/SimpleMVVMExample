@@ -13,6 +13,21 @@
 		6145685F26D4DFDC002421C3 /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145685C26D4DFDC002421C3 /* AccountTableViewCell.swift */; };
 		6145686026D4DFDC002421C3 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145685D26D4DFDC002421C3 /* MessageTableViewCell.swift */; };
 		6145687E26D4E698002421C3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145687D26D4E698002421C3 /* DetailViewController.swift */; };
+		6145688A26D50023002421C3 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAD2F0022F52BE6004310C1 /* PhotoViewModel.swift */; };
+		6145688B26D50023002421C3 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145685B26D4DFDC002421C3 /* CardTableViewCell.swift */; };
+		6145688C26D50023002421C3 /* PhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAD2ECC22F51C7E004310C1 /* PhotoListViewController.swift */; };
+		6145688D26D50023002421C3 /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145685C26D4DFDC002421C3 /* AccountTableViewCell.swift */; };
+		6145688E26D50023002421C3 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145685D26D4DFDC002421C3 /* MessageTableViewCell.swift */; };
+		6145688F26D50023002421C3 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAD2F0522F531AE004310C1 /* PhotoModel.swift */; };
+		6145689026D50023002421C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAD2ECA22F51C7E004310C1 /* AppDelegate.swift */; };
+		6145689126D50023002421C3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145687D26D4E698002421C3 /* DetailViewController.swift */; };
+		6145689326D50023002421C3 /* Pods_SimpleMVVMExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABD2B2B17A331355B28B3626 /* Pods_SimpleMVVMExample.framework */; };
+		6145689526D50023002421C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAAD2ED322F51C7F004310C1 /* LaunchScreen.storyboard */; };
+		6145689626D50023002421C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAAD2ED122F51C7F004310C1 /* Assets.xcassets */; };
+		6145689726D50023002421C3 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 61640D0C26CBCFBA001E13F4 /* Podfile */; };
+		6145689826D50023002421C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAAD2ECE22F51C7E004310C1 /* Main.storyboard */; };
+		614568AA26D50224002421C3 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614568A926D50224002421C3 /* Constant.swift */; };
+		614568AB26D50224002421C3 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614568A926D50224002421C3 /* Constant.swift */; };
 		61640D0D26CBCFBA001E13F4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 61640D0C26CBCFBA001E13F4 /* Podfile */; };
 		616DF6BC26D24FBB006E0211 /* SimpleMVVMExampleSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616DF6BB26D24FBB006E0211 /* SimpleMVVMExampleSnapshotTests.swift */; };
 		8C520FE0E61D577FAC7B42FC /* Pods_SimpleMVVMExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5487752672B6992EEBC0C26C /* Pods_SimpleMVVMExampleTests.framework */; };
@@ -63,6 +78,9 @@
 		6145685C26D4DFDC002421C3 /* AccountTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
 		6145685D26D4DFDC002421C3 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		6145687D26D4E698002421C3 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		6145689D26D50023002421C3 /* SimpleMVVMExample_Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMVVMExample_Dev.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		614568A326D50024002421C3 /* SimpleMVVMExample copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "SimpleMVVMExample copy-Info.plist"; path = "/Users/sandeepkumar/Downloads/SwiftCoding-master/MVVM/SimpleMVVMExample/SimpleMVVMExample copy-Info.plist"; sourceTree = "<absolute>"; };
+		614568A926D50224002421C3 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		61640D0C26CBCFBA001E13F4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		616DF47D26CD01D8006E0211 /* SimpleMVVMExampleSnapshotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleMVVMExampleSnapshotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		616DF6BB26D24FBB006E0211 /* SimpleMVVMExampleSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleMVVMExampleSnapshotTests.swift; sourceTree = "<group>"; };
@@ -87,6 +105,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6145689226D50023002421C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6145689326D50023002421C3 /* Pods_SimpleMVVMExample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		616DF47A26CD01D8006E0211 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -160,6 +186,7 @@
 				CAAD2EC822F51C7E004310C1 /* Products */,
 				F778CC4007A2FAEC1FBFA997 /* Pods */,
 				69CD617D214B88500DCA25D1 /* Frameworks */,
+				614568A326D50024002421C3 /* SimpleMVVMExample copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -170,6 +197,7 @@
 				CAAD2EDB22F51C7F004310C1 /* SimpleMVVMExampleTests.xctest */,
 				CAAD2EE622F51C7F004310C1 /* SimpleMVVMExampleUITests.xctest */,
 				616DF47D26CD01D8006E0211 /* SimpleMVVMExampleSnapshotTests.xctest */,
+				6145689D26D50023002421C3 /* SimpleMVVMExample_Dev.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -186,6 +214,7 @@
 				CAAD2ED322F51C7F004310C1 /* LaunchScreen.storyboard */,
 				CAAD2ED622F51C7F004310C1 /* Info.plist */,
 				61640D0C26CBCFBA001E13F4 /* Podfile */,
+				614568A926D50224002421C3 /* Constant.swift */,
 			);
 			path = SimpleMVVMExample;
 			sourceTree = "<group>";
@@ -250,6 +279,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6145688726D50023002421C3 /* SimpleMVVMExample_Dev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6145689A26D50023002421C3 /* Build configuration list for PBXNativeTarget "SimpleMVVMExample_Dev" */;
+			buildPhases = (
+				6145688826D50023002421C3 /* [CP] Check Pods Manifest.lock */,
+				6145688926D50023002421C3 /* Sources */,
+				6145689226D50023002421C3 /* Frameworks */,
+				6145689426D50023002421C3 /* Resources */,
+				6145689926D50023002421C3 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleMVVMExample_Dev;
+			productName = SimpleMVVMExample;
+			productReference = 6145689D26D50023002421C3 /* SimpleMVVMExample_Dev.app */;
+			productType = "com.apple.product-type.application";
+		};
 		616DF47C26CD01D8006E0211 /* SimpleMVVMExampleSnapshotTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 616DF48626CD01D8006E0211 /* Build configuration list for PBXNativeTarget "SimpleMVVMExampleSnapshotTests" */;
@@ -377,11 +425,23 @@
 				CAAD2EDA22F51C7F004310C1 /* SimpleMVVMExampleTests */,
 				CAAD2EE522F51C7F004310C1 /* SimpleMVVMExampleUITests */,
 				616DF47C26CD01D8006E0211 /* SimpleMVVMExampleSnapshotTests */,
+				6145688726D50023002421C3 /* SimpleMVVMExample_Dev */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6145689426D50023002421C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6145689526D50023002421C3 /* LaunchScreen.storyboard in Resources */,
+				6145689626D50023002421C3 /* Assets.xcassets in Resources */,
+				6145689726D50023002421C3 /* Podfile in Resources */,
+				6145689826D50023002421C3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		616DF47B26CD01D8006E0211 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -454,6 +514,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimpleMVVMExampleUITests/Pods-SimpleMVVMExampleUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6145688826D50023002421C3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimpleMVVMExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6145689926D50023002421C3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleMVVMExample/Pods-SimpleMVVMExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleMVVMExample/Pods-SimpleMVVMExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimpleMVVMExample/Pods-SimpleMVVMExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		65325AA2A2C629D317CCE442 /* [CP] Embed Pods Frameworks */ = {
@@ -537,6 +636,22 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6145688926D50023002421C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6145688A26D50023002421C3 /* PhotoViewModel.swift in Sources */,
+				6145688B26D50023002421C3 /* CardTableViewCell.swift in Sources */,
+				614568AB26D50224002421C3 /* Constant.swift in Sources */,
+				6145688C26D50023002421C3 /* PhotoListViewController.swift in Sources */,
+				6145688D26D50023002421C3 /* AccountTableViewCell.swift in Sources */,
+				6145688E26D50023002421C3 /* MessageTableViewCell.swift in Sources */,
+				6145688F26D50023002421C3 /* PhotoModel.swift in Sources */,
+				6145689026D50023002421C3 /* AppDelegate.swift in Sources */,
+				6145689126D50023002421C3 /* DetailViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		616DF47926CD01D8006E0211 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -551,6 +666,7 @@
 			files = (
 				CAAD2F0122F52BE6004310C1 /* PhotoViewModel.swift in Sources */,
 				6145685E26D4DFDC002421C3 /* CardTableViewCell.swift in Sources */,
+				614568AA26D50224002421C3 /* Constant.swift in Sources */,
 				CAAD2ECD22F51C7E004310C1 /* PhotoListViewController.swift in Sources */,
 				6145685F26D4DFDC002421C3 /* AccountTableViewCell.swift in Sources */,
 				6145686026D4DFDC002421C3 /* MessageTableViewCell.swift in Sources */,
@@ -616,6 +732,51 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		6145689B26D50023002421C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55624029A0AD4DD4A1B08BC6 /* Pods-SimpleMVVMExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = UW69ZFFDZJ;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				INFOPLIST_FILE = "SimpleMVVMExample copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.studeapps.SimpleMVVMExampleDev;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEVELOPMENT;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
+			};
+			name = Debug;
+		};
+		6145689C26D50023002421C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE17B577B17F2C538A1A4811 /* Pods-SimpleMVVMExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = UW69ZFFDZJ;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				INFOPLIST_FILE = "SimpleMVVMExample copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.studeapps.SimpleMVVMExampleDev;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
+			};
+			name = Release;
+		};
 		616DF48426CD01D8006E0211 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -804,7 +965,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.studeapps.SimpleMVVMExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.studeapps.SimpleMVVMExampleProd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -826,7 +987,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.studeapps.SimpleMVVMExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.studeapps.SimpleMVVMExampleProd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -963,6 +1124,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6145689A26D50023002421C3 /* Build configuration list for PBXNativeTarget "SimpleMVVMExample_Dev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6145689B26D50023002421C3 /* Debug */,
+				6145689C26D50023002421C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		616DF48626CD01D8006E0211 /* Build configuration list for PBXNativeTarget "SimpleMVVMExampleSnapshotTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
