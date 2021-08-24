@@ -1,10 +1,8 @@
 //
 //  SimpleMVVMExampleSnapshotTests.swift
-//  SimpleMVVMExampleSnapshotTests
+//  SimpleMVVMExample
 //
-//  Created by Sandeep Kumar on 22/08/21.
-//  Copyright © 2021 Steven Curtis. All rights reserved.
-//
+//  Created by Shinu Mohan on 24/08/21.
 
 import XCTest
 import SnapshotTesting

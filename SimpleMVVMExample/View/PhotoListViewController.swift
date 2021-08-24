@@ -20,6 +20,7 @@ class PhotoListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Customer Overview"
         self.view.backgroundColor = UIColor.lightGray
         let backgroundQueue = DispatchQueue.global(qos: .background)
         
@@ -41,7 +42,7 @@ class PhotoListViewController: UIViewController {
         tableView.register(CustomPhotoCell.self, forCellReuseIdentifier: "imageCell")
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.allowsSelection = false
+        tableView.allowsSelection = true
         
         self.view.addSubview(tableView)
         
@@ -136,8 +137,8 @@ extension PhotoListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "imageCell", for: indexPath) as! CustomPhotoCell
         cell.imgUser.image = self.photosViewModel.photos[indexPath.row]
-        cell.labUerName.text = indexPath.row.description
-        cell.labMessage.text = indexPath.row.description
+        cell.labUerName.text = "Customer Name: \(indexPath.row.description)"
+        cell.labMessage.text = "Account: \(indexPath.row.description)"
         return cell
     }
     
@@ -148,8 +149,16 @@ extension PhotoListViewController: UITableViewDataSource {
 
 // MARK :- TableViewDelegate
 
-extension PhotoListViewController: UITableViewDelegate {
-    
+extension PhotoListViewController : UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.section {
+            case 0:
+                let detailView = DetailViewController();
+                self.navigationController!.pushViewController(detailView, animated: true)
+            default:
+            return
+        }
+    }
 }
 
 // MARK :- TableViewCell

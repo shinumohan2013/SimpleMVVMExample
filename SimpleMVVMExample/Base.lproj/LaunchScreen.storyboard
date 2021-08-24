@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lloyd Test App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32D-h3-xvf">
-                                <rect key="frame" x="74" y="418" width="266" height="60"/>
+                                <rect key="frame" x="74" y="394" width="266" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="ozT-Ta-lrb"/>
                                     <constraint firstAttribute="width" constant="266" id="scy-7v-Wqz"/>
@@ -29,10 +29,10 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.077076241201862628" green="0.64339342666997434" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="32D-h3-xvf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="74" id="FpG-1e-4Ih"/>
-                            <constraint firstItem="32D-h3-xvf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="374" id="H4L-jl-zpb"/>
+                            <constraint firstItem="32D-h3-xvf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="350" id="H4L-jl-zpb"/>
                         </constraints>
                     </view>
                 </viewController>
