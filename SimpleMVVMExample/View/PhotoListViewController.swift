@@ -8,7 +8,25 @@ import UIKit
 import Alamofire
 import PromiseKit
 
-class PhotoListViewController: UIViewController {
+protocol TableViewCompatible {
+
+    var reuseIdentifier: String { get }
+    
+    func cellForTableView(tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
+    
+}
+
+class PhotoListViewController: UIViewController,TableViewCompatible {
+    
+    var reuseIdentifier: String = "imageCell"
+    
+    func cellForTableView(tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! CustomPhotoCell
+        cell.imgUser.image = self.photosViewModel.photos[indexPath.row]
+        cell.labUerName.text = "Customer Name: \(indexPath.row.description)"
+        cell.labMessage.text = "Account: \(indexPath.row.description)"
+        return cell
+    }
     
     var tableView = UITableView()
     var activityIndicator: UIActivityIndicatorView!
@@ -39,7 +57,7 @@ class PhotoListViewController: UIViewController {
                 print(error.localizedDescription)
         }
         
-        tableView.register(CustomPhotoCell.self, forCellReuseIdentifier: "imageCell")
+        tableView.register(CustomPhotoCell.self, forCellReuseIdentifier: reuseIdentifier)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.allowsSelection = true
@@ -135,7 +153,7 @@ extension PhotoListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "imageCell", for: indexPath) as! CustomPhotoCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! CustomPhotoCell
         cell.imgUser.image = self.photosViewModel.photos[indexPath.row]
         cell.labUerName.text = "Customer Name: \(indexPath.row.description)"
         cell.labMessage.text = "Account: \(indexPath.row.description)"
