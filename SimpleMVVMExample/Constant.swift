@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 
-
 #if DEVELOPMENT
 
 let baseUrl = "https://dev.appitventures.com/api/v1/"
