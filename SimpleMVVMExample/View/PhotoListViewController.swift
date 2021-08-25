@@ -9,11 +9,12 @@ import Alamofire
 import PromiseKit
 
 protocol TableViewCompatible {
-
     var reuseIdentifier: String { get }
-    
     func cellForTableView(tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
-    
+}
+
+protocol PhotoDownLoader {
+    func downloadPhotos(photos: [PhotoModel]) -> Promise<[UIImage]>
 }
 
 class PhotoListViewController: UIViewController,TableViewCompatible {
@@ -96,7 +97,7 @@ extension PhotoListViewController {
 
 // MARK :- Photo Api Calls
 
-extension PhotoListViewController {
+extension PhotoListViewController: PhotoDownLoader {
     
     private func fetchJSON() -> Promise<[PhotoModel]> {
         return Promise { seal in
@@ -118,7 +119,7 @@ extension PhotoListViewController {
         }
     }
     
-    private func downloadPhotos(photos: [PhotoModel]) -> Promise<[UIImage]> {
+  func downloadPhotos(photos: [PhotoModel]) -> Promise<[UIImage]> {
         return Promise { seal in
             var count = 0
             for photo in photos {
