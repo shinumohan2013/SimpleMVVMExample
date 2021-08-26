@@ -1,0 +1,54 @@
+{
+  "accounts": [
+    {
+      "AccountName":"CTC Media Inc.",
+      "Account Number":"54678",
+      "Contact Number":"12678-89",
+      "Current Balance":"12448 Kr"
+    },
+    {
+      "AccountName":"ING Media Inc.",
+      "Account Number":"54678",
+      "Contact Number":"12678-89",
+      "Current Balance":"78678 Kr"
+    },
+    {
+      "AccountName":"SKANDIN Media Inc.",
+      "Account Number":"54678",
+      "Contact Number":"12678-89",
+      "Current Balance":"89786 Kr"
+    },
+    {
+      "AccountName":"SYSKA Media Inc.",
+      "Account Number":"54678",
+      "Contact Number":"12678-89",
+      "Current Balance":"34556 Kr"
+    }
+  ],
+  "cards": [
+    {
+      "CardType":"VISA",
+      "Account Number":"54678",
+      "Contact Number":"12678-89",
+      "Current Balance":"12448 Kr"
+    },
+    {
+      "CardType":"MasterCard",
+      "Account Number":"54678",
+      "Contact Number":"12678-89",
+      "Current Balance":"12448 Kr"
+    },
+    {
+      "CardType":"CreditCard",
+      "Account Number":"54678",
+      "Contact Number":"12678-89",
+      "Current Balance":"12448 Kr"
+    },
+    {
+      "CardType":"DebitCard",
+      "Account Number":"54678",
+      "Contact Number":"12678-89",
+      "Current Balance":"12448 Kr"
+    }
+  ]
+}

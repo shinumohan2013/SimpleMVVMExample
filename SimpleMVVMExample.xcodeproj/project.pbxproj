@@ -28,6 +28,10 @@
 		614568E626D66BC6002421C3 /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614568E126D66BC6002421C3 /* AccountTableViewCell.swift */; };
 		614568E726D66BC6002421C3 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614568E226D66BC6002421C3 /* MessageTableViewCell.swift */; };
 		614568E826D66BC6002421C3 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614568E226D66BC6002421C3 /* MessageTableViewCell.swift */; };
+		614568EF26D785DC002421C3 /* AccountJson.json in Resources */ = {isa = PBXBuildFile; fileRef = 614568EE26D785DC002421C3 /* AccountJson.json */; };
+		614568F026D785DC002421C3 /* AccountJson.json in Resources */ = {isa = PBXBuildFile; fileRef = 614568EE26D785DC002421C3 /* AccountJson.json */; };
+		614568F726D78CFA002421C3 /* PersonnalAccounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614568F626D78CFA002421C3 /* PersonnalAccounts.swift */; };
+		614568F826D78CFA002421C3 /* PersonnalAccounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614568F626D78CFA002421C3 /* PersonnalAccounts.swift */; };
 		61640D0D26CBCFBA001E13F4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 61640D0C26CBCFBA001E13F4 /* Podfile */; };
 		616DF6BC26D24FBB006E0211 /* SimpleMVVMExampleSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616DF6BB26D24FBB006E0211 /* SimpleMVVMExampleSnapshotTests.swift */; };
 		8C520FE0E61D577FAC7B42FC /* Pods_SimpleMVVMExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5487752672B6992EEBC0C26C /* Pods_SimpleMVVMExampleTests.framework */; };
@@ -81,6 +85,8 @@
 		614568E026D66BC6002421C3 /* CardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
 		614568E126D66BC6002421C3 /* AccountTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
 		614568E226D66BC6002421C3 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		614568EE26D785DC002421C3 /* AccountJson.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AccountJson.json; sourceTree = "<group>"; };
+		614568F626D78CFA002421C3 /* PersonnalAccounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonnalAccounts.swift; sourceTree = "<group>"; };
 		61640D0C26CBCFBA001E13F4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		616DF47D26CD01D8006E0211 /* SimpleMVVMExampleSnapshotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleMVVMExampleSnapshotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		616DF6BB26D24FBB006E0211 /* SimpleMVVMExampleSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleMVVMExampleSnapshotTests.swift; sourceTree = "<group>"; };
@@ -215,6 +221,7 @@
 				CAAD2ED622F51C7F004310C1 /* Info.plist */,
 				61640D0C26CBCFBA001E13F4 /* Podfile */,
 				614568A926D50224002421C3 /* Constant.swift */,
+				614568EE26D785DC002421C3 /* AccountJson.json */,
 			);
 			path = SimpleMVVMExample;
 			sourceTree = "<group>";
@@ -239,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				CAAD2F0522F531AE004310C1 /* PhotoModel.swift */,
+				614568F626D78CFA002421C3 /* PersonnalAccounts.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -436,6 +444,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6145689526D50023002421C3 /* LaunchScreen.storyboard in Resources */,
+				614568F026D785DC002421C3 /* AccountJson.json in Resources */,
 				6145689626D50023002421C3 /* Assets.xcassets in Resources */,
 				6145689726D50023002421C3 /* Podfile in Resources */,
 				6145689826D50023002421C3 /* Main.storyboard in Resources */,
@@ -454,6 +463,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAAD2ED522F51C7F004310C1 /* LaunchScreen.storyboard in Resources */,
+				614568EF26D785DC002421C3 /* AccountJson.json in Resources */,
 				CAAD2ED222F51C7F004310C1 /* Assets.xcassets in Resources */,
 				61640D0D26CBCFBA001E13F4 /* Podfile in Resources */,
 				CAAD2ED022F51C7E004310C1 /* Main.storyboard in Resources */,
@@ -640,6 +650,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				614568F826D78CFA002421C3 /* PersonnalAccounts.swift in Sources */,
 				6145688A26D50023002421C3 /* PhotoViewModel.swift in Sources */,
 				614568AB26D50224002421C3 /* Constant.swift in Sources */,
 				614568E826D66BC6002421C3 /* MessageTableViewCell.swift in Sources */,
@@ -664,6 +675,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				614568F726D78CFA002421C3 /* PersonnalAccounts.swift in Sources */,
 				CAAD2F0122F52BE6004310C1 /* PhotoViewModel.swift in Sources */,
 				614568AA26D50224002421C3 /* Constant.swift in Sources */,
 				614568E726D66BC6002421C3 /* MessageTableViewCell.swift in Sources */,

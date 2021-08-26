@@ -8,6 +8,21 @@ import XCTest
 
 @testable import SimpleMVVMExample
 
+class MockDataSource: NSObject, UITableViewDataSource {
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
+}
+
 class SimpleMVVMExampleTests: XCTestCase {
 
     override func setUp() {
@@ -19,40 +34,36 @@ class SimpleMVVMExampleTests: XCTestCase {
     }
     
     func testControllerHasTableView() {
-        guard let controller = UIStoryboard(name: "Main", bundle: Bundle(for: PhotoListViewController.self)).instantiateInitialViewController() as? PhotoListViewController else {
-            return XCTFail("Could not instantiate ViewController from main storyboard")
-        }
-
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "PhotoListViewController") as! PhotoListViewController
         controller.loadViewIfNeeded()
-
         XCTAssertNotNil(controller.tableView,
                         "Controller should have a tableview")
     }
     
     func testNumberOfRows() {
+        let sut = MockDataSource()
         let tableView = UITableView()
-        let dataSource = tableView.dataSource
-        let numberOfRows = dataSource?.tableView(tableView, numberOfRowsInSection: 0)
-        XCTAssertEqual(numberOfRows, 20,
-                       "Number of rows in table should match number of kittens")
+        tableView.dataSource = sut
+        let numberOfRows = tableView.numberOfRows(inSection: 0)
+        XCTAssertEqual(numberOfRows, 10,
+                       "Number of rows in table should match number of mocks")
     }
     
-    func testCellForRow() {
+    func testNumberOfSections() {
+        let sut = MockDataSource()
         let tableView = UITableView()
-        let dataSource = tableView.dataSource
-        let cell = dataSource?.tableView(tableView, cellForRowAt: IndexPath(row: 0, section: 0))
-        XCTAssertEqual(cell?.textLabel?.text, "0",
-                       "The first cell should display name of first index")
+        tableView.dataSource = sut
+        let numberOfSections = tableView.numberOfSections
+        XCTAssertEqual(numberOfSections, 2,
+                       "Number of sections in table should match number of mocks")
     }
     
     func testTableViewHasCells() {
-        guard let controller = UIStoryboard(name: "Main", bundle: Bundle(for: PhotoListViewController.self)).instantiateInitialViewController() as? PhotoListViewController else {
-            return XCTFail("Could not instantiate ViewController from main storyboard")
-        }
-
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "PhotoListViewController") as! PhotoListViewController
         controller.loadViewIfNeeded()
         let cell = controller.tableView.dequeueReusableCell(withIdentifier: "imageCell")
-
         XCTAssertNotNil(cell,
                         "TableView should be able to dequeue cell with identifier: 'imageCell'")
     }
@@ -63,5 +74,4 @@ class SimpleMVVMExampleTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-
 }
