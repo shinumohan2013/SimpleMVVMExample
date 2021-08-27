@@ -32,6 +32,8 @@
 		614568F026D785DC002421C3 /* AccountJson.json in Resources */ = {isa = PBXBuildFile; fileRef = 614568EE26D785DC002421C3 /* AccountJson.json */; };
 		614568F726D78CFA002421C3 /* PersonnalAccounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614568F626D78CFA002421C3 /* PersonnalAccounts.swift */; };
 		614568F826D78CFA002421C3 /* PersonnalAccounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614568F626D78CFA002421C3 /* PersonnalAccounts.swift */; };
+		6145692126D7DE2F002421C3 /* AFWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145692026D7DE2F002421C3 /* AFWrapper.swift */; };
+		6145692226D7DE2F002421C3 /* AFWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145692026D7DE2F002421C3 /* AFWrapper.swift */; };
 		61640D0D26CBCFBA001E13F4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 61640D0C26CBCFBA001E13F4 /* Podfile */; };
 		616DF6BC26D24FBB006E0211 /* SimpleMVVMExampleSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616DF6BB26D24FBB006E0211 /* SimpleMVVMExampleSnapshotTests.swift */; };
 		8C520FE0E61D577FAC7B42FC /* Pods_SimpleMVVMExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5487752672B6992EEBC0C26C /* Pods_SimpleMVVMExampleTests.framework */; };
@@ -87,6 +89,7 @@
 		614568E226D66BC6002421C3 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		614568EE26D785DC002421C3 /* AccountJson.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AccountJson.json; sourceTree = "<group>"; };
 		614568F626D78CFA002421C3 /* PersonnalAccounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonnalAccounts.swift; sourceTree = "<group>"; };
+		6145692026D7DE2F002421C3 /* AFWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFWrapper.swift; sourceTree = "<group>"; };
 		61640D0C26CBCFBA001E13F4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		616DF47D26CD01D8006E0211 /* SimpleMVVMExampleSnapshotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleMVVMExampleSnapshotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		616DF6BB26D24FBB006E0211 /* SimpleMVVMExampleSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleMVVMExampleSnapshotTests.swift; sourceTree = "<group>"; };
@@ -164,6 +167,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		6145691F26D7DDF8002421C3 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				6145692026D7DE2F002421C3 /* AFWrapper.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		616DF47E26CD01D8006E0211 /* SimpleMVVMExampleSnapshotTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +226,7 @@
 				CAAD2F4922F555F9004310C1 /* View */,
 				CAAD2EFF22F52B83004310C1 /* Model */,
 				CAAD2F0222F52BEC004310C1 /* ViewModel */,
+				6145691F26D7DDF8002421C3 /* Networking */,
 				CAAD2ECE22F51C7E004310C1 /* Main.storyboard */,
 				CAAD2ED122F51C7F004310C1 /* Assets.xcassets */,
 				CAAD2ED322F51C7F004310C1 /* LaunchScreen.storyboard */,
@@ -656,6 +668,7 @@
 				614568E826D66BC6002421C3 /* MessageTableViewCell.swift in Sources */,
 				6145688C26D50023002421C3 /* PhotoListViewController.swift in Sources */,
 				614568D926D66BB5002421C3 /* DetailViewController.swift in Sources */,
+				6145692226D7DE2F002421C3 /* AFWrapper.swift in Sources */,
 				6145688F26D50023002421C3 /* PhotoModel.swift in Sources */,
 				614568E626D66BC6002421C3 /* AccountTableViewCell.swift in Sources */,
 				6145689026D50023002421C3 /* AppDelegate.swift in Sources */,
@@ -681,6 +694,7 @@
 				614568E726D66BC6002421C3 /* MessageTableViewCell.swift in Sources */,
 				CAAD2ECD22F51C7E004310C1 /* PhotoListViewController.swift in Sources */,
 				614568D826D66BB5002421C3 /* DetailViewController.swift in Sources */,
+				6145692126D7DE2F002421C3 /* AFWrapper.swift in Sources */,
 				CAAD2F0622F531AE004310C1 /* PhotoModel.swift in Sources */,
 				614568E526D66BC6002421C3 /* AccountTableViewCell.swift in Sources */,
 				CAAD2ECB22F51C7E004310C1 /* AppDelegate.swift in Sources */,
