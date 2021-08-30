@@ -30,13 +30,13 @@ public class RequestHandler {
     ///   - requestModel:APIRequestModel
     ///   - success:response
     public func request(requestModel: APIRequestModel,
-                        success: @escaping ( _ response: DataResponse<Any, Error>) -> Void) {
+                        success: @escaping ( _ response: AFDataResponse<Any>) -> Void) {
         if let baseURL = requestModel.url {
             AF.request(baseURL)
               .validate()
               .response { (data) in
-                    //success(data)
-                }
+                    success(data)
+            }
         }
     }
     
@@ -56,7 +56,7 @@ public class RequestHandler {
     ///   - response:The server's response to the URL request.
     ///   - success: SuccessCompletionBlock
     ///   - failure: FailureErrorBlock
-    public static func handleResponseJSON(_ response: DataResponse<Any, Error>, success: @escaping RequestHandlerCompletionBlock, failure: @escaping FailureErrorBlock) {
+    public static func handleResponseJSON(_ response: AFDataResponse<Any>, success: @escaping RequestHandlerCompletionBlock, failure: @escaping FailureErrorBlock) {
         switch response.result {
         case .success:
             if let json = response.result as? [String: Any] {
@@ -139,12 +139,12 @@ public class RequestHandler {
     
     /// Show error based on response
     /// - Parameter response:The server's response to the URL request.
-    public static func extractErrorValues(response: DataResponse<Any, Error>) {
+    public static func extractErrorValues(response: AFDataResponse<Any>) {
         guard case let .failure(error) = response.result else { return }
         if let error = error as? AFError {
             extractError(error)
             print("Underlying error: \(String(describing: error.underlyingError))")
-        } else if let error = error as? URLError {
+        } else if let error = error as? AFError {
             print("URLError occurred: \(error)")
         } else {
             print("Unknown error: \(error)")
